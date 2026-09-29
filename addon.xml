@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="weather.nws"
+       name="NWS Weather"
+       version="1.0.0"
+       provider-name="SiLVO">
+  <requires>
+    <import addon="xbmc.python" version="3.0.2"/>
+  </requires>
+  <extension point="xbmc.python.weather" library="default.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">US weather from the National Weather Service</summary>
+    <description lang="en_GB">Weather data from authoritative US government sources. Forecasts from NWS (human-edited by local meteorologists), radar from NWS, UV index and sun times from Open-Meteo.com (CC BY 4.0), air quality from Open-Meteo or AirNow with your own free key. Location search by the US Census geocoder and Nominatim, © OpenStreetMap contributors.</description>
+    <platform>all</platform>
+    <license>GPL-3.0-only</license>
+    <source>https://github.com/MikeSiLVO/weather.nws</source>
+    <news>
+1.0.0
+- Current conditions, hourly forecast for 72 hours and daily forecast for 7 days from the National Weather Service, for up to five US locations
+- The local forecaster's written forecast for each day and night
+- Radar and satellite loops centered on your location, forecast highs across the lower 48 states, and a hurricane or severe weather map when one applies
+- Active NWS alerts for your location
+- Air quality, UV index, sunrise, sunset and moon phase
+- Temperatures, wind, times and dates follow your Kodi region settings
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>

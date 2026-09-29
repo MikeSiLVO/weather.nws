@@ -1,0 +1,188 @@
+# weather.nws language file
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+
+msgctxt "#30001"
+msgid "Location 1"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Location 2"
+msgstr ""
+
+msgctxt "#30003"
+msgid "Location 3"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Location 4"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Location 5"
+msgstr ""
+
+msgctxt "#30024"
+msgid "Locations"
+msgstr ""
+
+msgctxt "#30025"
+msgid "Air quality"
+msgstr ""
+
+msgctxt "#30026"
+msgid "AirNow API key"
+msgstr ""
+
+msgctxt "#30027"
+msgid "Optional. With a free key from airnowapi.org, air quality comes from EPA monitors. Without one it comes from the Open-Meteo air quality model."
+msgstr ""
+
+msgctxt "#30100"
+msgid "Local radar"
+msgstr ""
+
+msgctxt "#30101"
+msgid "Regional radar"
+msgstr ""
+
+msgctxt "#30102"
+msgid "Satellite"
+msgstr ""
+
+msgctxt "#30103"
+msgid "Forecast highs"
+msgstr ""
+
+msgctxt "#30104"
+msgid "Severe weather outlook"
+msgstr ""
+
+#. %s is the storm name
+msgctxt "#30105"
+msgid "Hurricane %s"
+msgstr ""
+
+#. %s is the storm name
+msgctxt "#30106"
+msgid "Tropical Storm %s"
+msgstr ""
+
+#. %s is the storm name
+msgctxt "#30107"
+msgid "Tropical Depression %s"
+msgstr ""
+
+#. %s is the storm name
+msgctxt "#30108"
+msgid "Tropical Cyclone %s"
+msgstr ""
+
+msgctxt "#30110"
+msgid "Enter US city, state or ZIP code"
+msgstr ""
+
+msgctxt "#30111"
+msgid "Location search failed"
+msgstr ""
+
+msgctxt "#30112"
+msgid "No locations found"
+msgstr ""
+
+msgctxt "#30113"
+msgid "Confirm location"
+msgstr ""
+
+msgctxt "#30114"
+msgid "NWS lookup failed"
+msgstr ""
+
+#. %s is the location name
+msgctxt "#30115"
+msgid "Location set: %s"
+msgstr ""
+
+msgctxt "#30120"
+msgid "Good"
+msgstr ""
+
+msgctxt "#30121"
+msgid "Moderate"
+msgstr ""
+
+msgctxt "#30122"
+msgid "Unhealthy for Sensitive Groups"
+msgstr ""
+
+msgctxt "#30123"
+msgid "Unhealthy"
+msgstr ""
+
+msgctxt "#30124"
+msgid "Very Unhealthy"
+msgstr ""
+
+msgctxt "#30125"
+msgid "Hazardous"
+msgstr ""
+
+msgctxt "#30130"
+msgid "Thunderstorms"
+msgstr ""
+
+msgctxt "#30131"
+msgid "Marginal"
+msgstr ""
+
+msgctxt "#30132"
+msgid "Slight"
+msgstr ""
+
+msgctxt "#30133"
+msgid "Enhanced"
+msgstr ""
+
+#. severe weather outlook risk level, not the air quality category
+msgctxt "#30134"
+msgid "Moderate"
+msgstr ""
+
+msgctxt "#30135"
+msgid "High"
+msgstr ""
+
+msgctxt "#30140"
+msgid "New moon"
+msgstr ""
+
+msgctxt "#30141"
+msgid "Waxing crescent"
+msgstr ""
+
+msgctxt "#30142"
+msgid "First quarter"
+msgstr ""
+
+msgctxt "#30143"
+msgid "Waxing gibbous"
+msgstr ""
+
+msgctxt "#30144"
+msgid "Full moon"
+msgstr ""
+
+msgctxt "#30145"
+msgid "Waning gibbous"
+msgstr ""
+
+msgctxt "#30146"
+msgid "Last quarter"
+msgstr ""
+
+msgctxt "#30147"
+msgid "Waning crescent"
+msgstr ""

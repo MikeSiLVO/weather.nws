@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1">
+  <section id="weather.nws">
+    <category id="locations" label="30024">
+      <group id="1">
+        <setting id="loc1" type="string" label="30001">
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="button" format="action">
+            <data>RunScript(weather.nws,loc1)</data>
+          </control>
+        </setting>
+        <setting id="loc1lat" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc1lon" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc1gridwfo" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc1gridx" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc1gridy" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc1utcoffset" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+      <group id="2">
+        <setting id="loc2" type="string" label="30002">
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="button" format="action">
+            <data>RunScript(weather.nws,loc2)</data>
+          </control>
+        </setting>
+        <setting id="loc2lat" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc2lon" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc2gridwfo" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc2gridx" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc2gridy" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc2utcoffset" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+      <group id="3">
+        <setting id="loc3" type="string" label="30003">
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="button" format="action">
+            <data>RunScript(weather.nws,loc3)</data>
+          </control>
+        </setting>
+        <setting id="loc3lat" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc3lon" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc3gridwfo" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc3gridx" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc3gridy" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc3utcoffset" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+      <group id="4">
+        <setting id="loc4" type="string" label="30004">
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="button" format="action">
+            <data>RunScript(weather.nws,loc4)</data>
+          </control>
+        </setting>
+        <setting id="loc4lat" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc4lon" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc4gridwfo" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc4gridx" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc4gridy" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc4utcoffset" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+      <group id="5">
+        <setting id="loc5" type="string" label="30005">
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="button" format="action">
+            <data>RunScript(weather.nws,loc5)</data>
+          </control>
+        </setting>
+        <setting id="loc5lat" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc5lon" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc5gridwfo" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc5gridx" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc5gridy" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+        <setting id="loc5utcoffset" type="string">
+          <visible>false</visible>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string" />
+        </setting>
+      </group>
+    </category>
+    <category id="airquality" label="30025">
+      <group id="1">
+        <setting id="airnow_key" type="string" label="30026" help="30027">
+          <level>0</level>
+          <default></default>
+          <constraints><allowempty>true</allowempty></constraints>
+          <control type="edit" format="string">
+            <heading>30026</heading>
+          </control>
+        </setting>
+      </group>
+    </category>
+  </section>
+</settings>
