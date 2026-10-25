@@ -10,6 +10,7 @@
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <license>GPL-3.0-only</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=389200</forum>
     <source>https://github.com/MikeSiLVO/weather.nws</source>
     <news>
 1.0.0
