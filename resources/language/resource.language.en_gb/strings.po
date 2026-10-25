@@ -5,6 +5,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en\n"
 
+msgctxt "Addon Summary"
+msgid "US weather from the National Weather Service"
+msgstr ""
+
+msgctxt "Addon Description"
+msgid "Weather data from authoritative US government sources. Forecasts from NWS (human-edited by local meteorologists), radar from NWS, UV index and sun times from Open-Meteo.com (CC BY 4.0), air quality from Open-Meteo or AirNow with your own free key. Location search by the US Census geocoder and Nominatim, © OpenStreetMap contributors."
+msgstr ""
+
 msgctxt "#30001"
 msgid "Location 1"
 msgstr ""

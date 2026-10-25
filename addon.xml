@@ -8,8 +8,6 @@
   </requires>
   <extension point="xbmc.python.weather" library="default.py"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">US weather from the National Weather Service</summary>
-    <description lang="en_GB">Weather data from authoritative US government sources. Forecasts from NWS (human-edited by local meteorologists), radar from NWS, UV index and sun times from Open-Meteo.com (CC BY 4.0), air quality from Open-Meteo or AirNow with your own free key. Location search by the US Census geocoder and Nominatim, © OpenStreetMap contributors.</description>
     <platform>all</platform>
     <license>GPL-3.0-only</license>
     <source>https://github.com/MikeSiLVO/weather.nws</source>
@@ -26,5 +24,7 @@
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
     </assets>
+    <summary lang="en_GB">US weather from the National Weather Service</summary>
+    <description lang="en_GB">Weather data from authoritative US government sources. Forecasts from NWS (human-edited by local meteorologists), radar from NWS, UV index and sun times from Open-Meteo.com (CC BY 4.0), air quality from Open-Meteo or AirNow with your own free key. Location search by the US Census geocoder and Nominatim, © OpenStreetMap contributors.</description>
   </extension>
 </addon>
