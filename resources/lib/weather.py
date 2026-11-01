@@ -50,13 +50,16 @@ def set_property(name, value):
 
 
 def main():
-    """Configure a location slot for a loc argument, else fetch weather for a location index."""
+    """Configure or clear a location slot by argument, else fetch weather for a location index."""
     param = sys.argv[1] if len(sys.argv) > 1 else ''
     log(f'Invoked with param: {param}')
 
-    if param.startswith('loc'):
+    if param.startswith(('loc', 'clear')):
         from . import location  # location imports this module
-        location.configure(param)
+        if param.startswith('loc'):
+            location.configure(param)
+        else:
+            location.clear(param)
     else:
         fetch_weather(param)
 
@@ -70,7 +73,14 @@ def fetch_weather(param):
     except ValueError:
         loc_index = 1
 
-    prefix = f'loc{loc_index}'
+    slots = _configured_slots()
+    # set before the range check: Kodi clamps a stale index to Locations
+    _set_location_properties(slots)
+    if not 1 <= loc_index <= len(slots):
+        log(f'Location {loc_index} not configured')
+        return
+
+    prefix = f'loc{slots[loc_index - 1]}'
     name = ADDON.getSetting(prefix)
     lat = ADDON.getSetting(f'{prefix}lat')
     lon = ADDON.getSetting(f'{prefix}lon')
@@ -93,7 +103,6 @@ def fetch_weather(param):
     set_property('Forecast.Longitude', lon)
     now = datetime.now()
     set_property('Forecast.Updated', f'{units.format_short_date(now)} {units.format_time(now)}')
-    _set_location_properties()
 
     grid = None
     if wfo and grid_x and grid_y:
@@ -189,15 +198,17 @@ def _hour_ended(period, now):
         return False
 
 
-def _set_location_properties():
-    """Set Location1 to Location5 and the Locations count from the configured slots."""
-    count = 0
+def _configured_slots():
+    """Slot numbers holding a location, in order; Kodi's location index counts these."""
+    return [i for i in range(1, 6) if ADDON.getSetting(f'loc{i}')]
+
+
+def _set_location_properties(slots):
+    """Set Location1 to Location5 and the Locations count, numbered from 1 with no gaps."""
+    names = [ADDON.getSetting(f'loc{slot}') for slot in slots]
     for i in range(1, 6):
-        loc_name = ADDON.getSetting(f'loc{i}')
-        if loc_name:
-            count += 1
-        set_property(f'Location{i}', loc_name)
-    set_property('Locations', str(count))
+        set_property(f'Location{i}', names[i - 1] if i <= len(names) else '')
+    set_property('Locations', str(len(names)))
 
 
 def _fetch_current(periods, grid):

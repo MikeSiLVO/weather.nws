@@ -33,6 +33,10 @@ msgctxt "#30005"
 msgid "Location 5"
 msgstr ""
 
+msgctxt "#30006"
+msgid "Remove location"
+msgstr ""
+
 msgctxt "#30024"
 msgid "Locations"
 msgstr ""
@@ -112,6 +116,11 @@ msgstr ""
 #. %s is the location name
 msgctxt "#30115"
 msgid "Location set: %s"
+msgstr ""
+
+#. %s is the location name
+msgctxt "#30116"
+msgid "Location removed: %s"
 msgstr ""
 
 msgctxt "#30120"

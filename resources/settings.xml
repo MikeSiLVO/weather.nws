@@ -10,6 +10,16 @@
             <data>RunScript(weather.nws,loc1)</data>
           </control>
         </setting>
+        <setting id="loc1clear" type="action" label="30006">
+          <data>RunScript(weather.nws,clear1)</data>
+          <constraints><allowempty>true</allowempty></constraints>
+          <dependencies>
+            <dependency type="visible">
+              <condition operator="!is" setting="loc1" />
+            </dependency>
+          </dependencies>
+          <control type="button" format="action" />
+        </setting>
         <setting id="loc1lat" type="string">
           <visible>false</visible>
           <default></default>
@@ -54,6 +64,16 @@
           <control type="button" format="action">
             <data>RunScript(weather.nws,loc2)</data>
           </control>
+        </setting>
+        <setting id="loc2clear" type="action" label="30006">
+          <data>RunScript(weather.nws,clear2)</data>
+          <constraints><allowempty>true</allowempty></constraints>
+          <dependencies>
+            <dependency type="visible">
+              <condition operator="!is" setting="loc2" />
+            </dependency>
+          </dependencies>
+          <control type="button" format="action" />
         </setting>
         <setting id="loc2lat" type="string">
           <visible>false</visible>
@@ -100,6 +120,16 @@
             <data>RunScript(weather.nws,loc3)</data>
           </control>
         </setting>
+        <setting id="loc3clear" type="action" label="30006">
+          <data>RunScript(weather.nws,clear3)</data>
+          <constraints><allowempty>true</allowempty></constraints>
+          <dependencies>
+            <dependency type="visible">
+              <condition operator="!is" setting="loc3" />
+            </dependency>
+          </dependencies>
+          <control type="button" format="action" />
+        </setting>
         <setting id="loc3lat" type="string">
           <visible>false</visible>
           <default></default>
@@ -145,6 +175,16 @@
             <data>RunScript(weather.nws,loc4)</data>
           </control>
         </setting>
+        <setting id="loc4clear" type="action" label="30006">
+          <data>RunScript(weather.nws,clear4)</data>
+          <constraints><allowempty>true</allowempty></constraints>
+          <dependencies>
+            <dependency type="visible">
+              <condition operator="!is" setting="loc4" />
+            </dependency>
+          </dependencies>
+          <control type="button" format="action" />
+        </setting>
         <setting id="loc4lat" type="string">
           <visible>false</visible>
           <default></default>
@@ -189,6 +229,16 @@
           <control type="button" format="action">
             <data>RunScript(weather.nws,loc5)</data>
           </control>
+        </setting>
+        <setting id="loc5clear" type="action" label="30006">
+          <data>RunScript(weather.nws,clear5)</data>
+          <constraints><allowempty>true</allowempty></constraints>
+          <dependencies>
+            <dependency type="visible">
+              <condition operator="!is" setting="loc5" />
+            </dependency>
+          </dependencies>
+          <control type="button" format="action" />
         </setting>
         <setting id="loc5lat" type="string">
           <visible>false</visible>

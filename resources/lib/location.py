@@ -1,4 +1,4 @@
-"""Location slot setup from a keyboard search."""
+"""Location slot setup from a keyboard search, and slot clearing."""
 
 import xbmc
 import xbmcgui
@@ -6,9 +6,11 @@ import xbmcgui
 from . import geocode, http, nws
 from .weather import ADDON, ADDON_NAME, lang, log
 
+SLOT_FIELDS = ('', 'lat', 'lon', 'gridwfo', 'gridx', 'gridy', 'utcoffset')
+
 
 def configure(param):
-    """Configure a location slot from a keyboard search and store its NWS grid in settings."""
+    """Configure a location slot from a keyboard search, save its NWS grid and refresh weather."""
     loc_index = param.replace('loc', '')
 
     current = ADDON.getSetting(f'loc{loc_index}')
@@ -75,14 +77,38 @@ def configure(param):
         display_name = location['name']
 
     prefix = f'loc{loc_index}'
-    ADDON.setSetting(prefix, display_name)
-    ADDON.setSetting(f'{prefix}lat', lat)
-    ADDON.setSetting(f'{prefix}lon', lon)
-    ADDON.setSetting(f'{prefix}gridwfo', point['wfo'])
-    ADDON.setSetting(f'{prefix}gridx', str(point['grid_x']))
-    ADDON.setSetting(f'{prefix}gridy', str(point['grid_y']))
+    _save_setting(prefix, display_name)
+    _save_setting(f'{prefix}lat', lat)
+    _save_setting(f'{prefix}lon', lon)
+    _save_setting(f'{prefix}gridwfo', point['wfo'])
+    _save_setting(f'{prefix}gridx', str(point['grid_x']))
+    _save_setting(f'{prefix}gridy', str(point['grid_y']))
+    # cached for the slot's previous location
+    _save_setting(f'{prefix}utcoffset', '')
 
     log(f'Location {loc_index} set: {display_name} ({lat},{lon}) WFO:{point["wfo"]}')
+    # Kodi refetches only after OK, and its location list comes from a fetch
+    xbmc.executebuiltin('Weather.Refresh')
 
     xbmcgui.Dialog().notification(ADDON_NAME, lang(30115) % display_name,
                                   xbmcgui.NOTIFICATION_INFO)
+
+
+def clear(param):
+    """Clear every setting of a location slot and refresh weather."""
+    prefix = param.replace('clear', 'loc')
+    name = ADDON.getSetting(prefix)
+    for field in SLOT_FIELDS:
+        _save_setting(f'{prefix}{field}', '')
+
+    log(f'Location {prefix[3:]} cleared: {name}')
+    xbmc.executebuiltin('Weather.Refresh')
+
+    xbmcgui.Dialog().notification(ADDON_NAME, lang(30116) % name, xbmcgui.NOTIFICATION_INFO)
+
+
+def _save_setting(key, value):
+    """Save a setting to disk and to the open settings dialog, kept on either OK or Cancel."""
+    # with the dialog open, setSetting only updates the dialog's copy
+    ADDON.getSettings().setString(key, value)
+    ADDON.setSetting(key, value)
